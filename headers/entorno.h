@@ -11,7 +11,7 @@ public:
 
     Entorno(const int &dimension,const double &probabilityDirt);
 
-
+    void moveAgent(pair <int,int>);
     void printMatrix() const;
     void generateDirt();
     void cleanCell(pair<int,int> position);

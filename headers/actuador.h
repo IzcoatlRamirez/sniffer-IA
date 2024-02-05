@@ -5,26 +5,27 @@
 
 using namespace std;
 
-class Actuador {
-public:
-    // virtual void keyUp() = 0;
-    // virtual void keyDown() = 0;
-    // virtual void keyLeft() = 0;
-    // virtual void keyRight() = 0;
-};
-
-class ActuadorSimple : public Actuador {
+class ActuadorSimple{
     public:
-      ActuadorSimple(Entorno &env);
-      void clean(pair<int, int> position);
-      
-        // void keyUp() override;
-        // void keyDown() override;
-        // void keyLeft() override;
-        // void keyRight() override;
+        ActuadorSimple(Entorno &env);
+        void clean(pair<int, int> position);
+        virtual void keyUp() ;
+        virtual void keyDown() ;
+        virtual void keyLeft() ;
+        virtual void keyRight() ;
     private:
         Entorno &env;
 };
+
+class Actuador: ActuadorSimple {
+public:
+    // void keyUp() override;
+    // void keyDown() override;
+    // void keyLeft() override;
+    // void keyRight() override;
+};
+
+
 
 #endif // ACTUADOR_H
        

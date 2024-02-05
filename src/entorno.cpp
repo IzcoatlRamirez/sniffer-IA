@@ -59,7 +59,9 @@ pair <int,int> Entorno::getPositionAgent() const
     return positionAgent;
 }
 
-
+void Entorno::moveAgent(pair<int,int> position){
+    positionAgent = position;
+}
 
 
 
