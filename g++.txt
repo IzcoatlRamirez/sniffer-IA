@@ -1,0 +1,7 @@
+--para compilar el proyecto--
+
+g++ -o main src/*.cpp -Iheaders && ./main
+
+compila todos los archivos fuente (.cpp) en el directorio "src", 
+utiliza los archivos de encabezado en el directorio "headers", y 
+genera un ejecutable llamado "main". Luego, ejecuta el programa si la compilación fue exitosa.
