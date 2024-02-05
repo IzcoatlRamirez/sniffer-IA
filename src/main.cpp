@@ -21,24 +21,11 @@ int main() {
 do{
     cout<<endl;
     sniffer.env.printMatrix();
-    if(sniffer.sensor.detecDirt(make_pair(0, 2))){
-        cout<<"hay suciedad"<<endl;
-        sniffer.actuador.clean(make_pair(0, 2));
-        sniffer.env.printMatrix();
-        if(!sniffer.sensor.detecDirt(make_pair(0, 2))){
-            cout<<"se limpio"<<endl;
-        }
-        else{
-            cout<<"no se limpio"<<endl;
-        }
-    }       
-    else{
-        cout<<"no hay suciedad"<<endl;
-    }
     try
     {
         cout<<"ingresa direccion para mover el agente (ingresa 'z' para salir): ";
         Move[0] = getch();
+        system("cls");
         if(Move[0]=='z'){
             Exit= true;
             throw "exit";
